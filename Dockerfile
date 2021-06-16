@@ -30,6 +30,6 @@ RUN test -d /var/run/lock || mkdir -p /var/run/lock \
     && sed -i 's/CustomLog logs\/ssl_request_log/CustomLog \/dev\/stdout/g' /etc/httpd/conf.d/ssl.conf \
     && sed -i 's/TransferLog logs\/ssl_access_log/TransferLog \/dev\/stdout/g' /etc/httpd/conf.d/ssl.conf
     
-EXPOSE 80 443 82 444
+EXPOSE 80 443 82
 
 CMD ["httpd-shibd-foreground"]
